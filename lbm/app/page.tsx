@@ -7,6 +7,9 @@ import ServiceCard from "@/components/service-card"
 import DomainCard from "@/components/domain-card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import ImageSlideshow from "@/components/image-slideshow"
+import Image from "next/image"
+import Landing from "@/components/landing"
+
 
 export default function Home() {
   // Images pour le diaporama
@@ -42,8 +45,8 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-slate-900 py-20 md:py-28">
-          <div className="container relative z-10 mx-auto px-4 text-center text-white  w-1/2">
+        {/* <section className="relative bg-slate-900 py-20 md:py-28">
+          <div className="container relative z-10 mx-auto px-4 text-center text-white w-1/2">
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
               Formez-vous pour l&apos;avenir avec LBM Formations
             </h1>
@@ -65,9 +68,11 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800 opacity-90"></div>
-        </section>
-
+          <div className="absolute flex inset-0 bg-gradient-to-r from-slate-900 to-slate-800 opacity-90 justify-center blur-xs">
+                <Image src="/meeting-stock.jpg" alt="LBM Formations" height={3600} width={3400} className="h-full w-full " />
+          </div>
+        </section> */}
+        <Landing></Landing>
         {/* Services Section */}
         <section id="services" className="py-16 md:py-24">
           <div className="container">

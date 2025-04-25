@@ -6,21 +6,25 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-xs transition-all">
       <div className="container flex h-20 items-center justify-around">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.jpeg" alt="LBM Formations" width={80} height={34}  />
+          <Image src="/logo-transparent-bg.png" alt="LBM Formations" width={80} height={34}  />
         </Link>
-        <nav className="hidden md:flex gap-20 font-semibold">
+        <nav className="hidden md:flex gap-20 items-center font-semibold">
           <Link href="/" className="text-m hover:underline underline-offset-4">
             Accueil
           </Link>
           <Link href="/formations" className="text-m hover:underline underline-offset-4">
             Formations
           </Link>
-          <Link href="#contact" className="text-m hover:underline underline-offset-4">
-            Contact
+          <Link href="/formations" className="text-m hover:underline underline-offset-4">
+            Domaines
           </Link>
+          <Link href="#contact" className="text-m hover:underline underline-offset-4">
+            <Button>Contact</Button>
+          </Link>
+
         </nav>
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
@@ -48,5 +52,8 @@ export default function Navbar() {
         </Sheet>
       </div>
     </header>
+    
   )
 }
+
+
